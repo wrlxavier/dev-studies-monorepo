@@ -1,0 +1,23 @@
+{
+  "name": "task-organizer-mvc",
+  "version": "1.0.0",
+  "description": "Front-end application, developed in pure Typescript and structured in mvc architecture",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "lite-server --baseDir=src",
+    "dev": "concurrently \"npm run watch\" \"npm run server\" \"npm run sass-dev\" ",
+    "compile": "tsc",
+    "watch": "tsc -w",
+    "sass-dev": "sass --watch --update --style=expanded src/styles/main.scss:src/styles/main.css",
+    "sass-prod": "sass --no-source-map --style=compressed src/styles/main.scss:src/styles/main.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "lite-server": "^2.6.1",
+    "sass": "^1.65.1",
+    "typescript": "^5.1.6"
+  }
+}
